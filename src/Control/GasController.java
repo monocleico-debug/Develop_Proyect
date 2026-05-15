@@ -1,3 +1,10 @@
+package Control;
+
+import CalculationsService.Calculations;
+import Model.Gas;
+import Model.Result;
+import Model.User;
+
 import java.util.Scanner;
 
 public class GasController {
@@ -48,7 +55,7 @@ public class GasController {
         calc.calculateStratumAdjustment(user.getStratum());
         calc.calculateScore(gas.getPoints());
         calc.calculateExpectedConsumption();
-        calc.calculatePercentage(gas.getRealGas());
+        calc.calculatePercentage(gas.getRealConsumption());
         calc.classifyConsumption();
 
 
