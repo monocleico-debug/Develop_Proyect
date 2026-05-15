@@ -1,5 +1,3 @@
-package Model;
-
 public class User {
     private int stratum;
     private int numperson;

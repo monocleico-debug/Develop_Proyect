@@ -1,5 +1,3 @@
-import Control.GasController;
-
 import java.util.Scanner;
 public class Menu {
     public static void main(String[] args) {
@@ -12,7 +10,7 @@ public class Menu {
             System.out.println("\n==============================");
             System.out.println("Analisis de Servicios Publicos");
             System.out.println("==============================");
-            System.out.println("1. Model.Gas");
+            System.out.println("1. Gas");
             System.out.println("2. Agua");
             System.out.println("3. Luz");
             System.out.println("4. Internet");
