@@ -63,7 +63,10 @@ public class GasController {
                 calc.getBaseConsumption(),
                 calc.getExpectedConsumption(),
                 calc.getPercentage(),
-                calc.getClassification()
+                calc.getClassification(),
+                calc.getEfficiencyLevel(),
+                calc.getRecommendation(),
+                calc.getAlert()
         );
 
         System.out.println("\n===== RESULTADOS =====");

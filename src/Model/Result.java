@@ -10,19 +10,13 @@ public class Result {
     private String recommendation;
     private String alert;
 
-    public Result(
-            double baseConsumption,
-            double expectedConsumption,
-            double percentage,
-            String classification,
-            String efficiencyLevel,
-            String recommendation,
-            String alert) {
+    public Result(double baseConsumption, double expectedConsumption, double percentage,
+                  String classification, String efficiencyLevel, String recommendation,
+                  String alert) {
 
         this.baseConsumption = baseConsumption;
         this.expectedConsumption = expectedConsumption;
         this.percentage = percentage;
-
         this.classification = classification;
         this.efficiencyLevel = efficiencyLevel;
         this.recommendation = recommendation;
@@ -61,5 +55,4 @@ public class Result {
                         + alert);
 
     }
-
 }

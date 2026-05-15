@@ -1,54 +1,91 @@
 import Control.GasController;
 
-import java.util.Scanner;
-public class Menu {
-    public static void main(String[] args) {
+import javax.swing.*;
+import java.awt.*;
 
-        Scanner sc = new Scanner(System.in);
-        int option;
+public class Menu extends JFrame {
 
-        do{
+    public Menu() {
 
-            System.out.println("\n==============================");
-            System.out.println("Analisis de Servicios Publicos");
-            System.out.println("==============================");
-            System.out.println("1. Model.Gas");
-            System.out.println("2. Agua");
-            System.out.println("3. Luz");
-            System.out.println("4. Internet");
-            System.out.println("5. Salir");System.out.println("Elige una opcion: ");
+        setTitle("Analisis de Servicios Publicos");
 
-            option = sc.nextInt();
+        setSize(400, 350);
 
-            switch(option){
+        setDefaultCloseOperation(
+                JFrame.EXIT_ON_CLOSE);
 
-                case 1:
-                    GasController g = new GasController();
-                    g.iniciar();
-                    break;
+        setLocationRelativeTo(null);
 
-                case 2:
-                    //Agua
-                    break;
+        setLayout(new GridLayout(5,1,10,10));
 
-                case 3:
-                    //Luz
-                    break;
+        JButton gasButton =
+                new JButton("Gas");
 
-                case 4:
-                    //Internet
-                    break;
+        JButton waterButton =
+                new JButton("Agua");
 
-                case 5:
-                    System.out.println("Saliendo...");
-                    break;
+        JButton lightButton =
+                new JButton("Luz");
 
-                default:
-                    System.out.println("Opción inválida");
-            }
+        JButton wifiButton =
+                new JButton("Internet");
 
-        } while (option != 5);
-        sc.close();
+        JButton exitButton =
+                new JButton("Salir");
+
+        add(gasButton);
+        add(waterButton);
+        add(lightButton);
+        add(wifiButton);
+        add(exitButton);
+
+        gasButton.addActionListener(e -> {
+
+            GasController g =
+                    new GasController();
+
+            g.iniciar();
+
+        });
+
+        waterButton.addActionListener(e -> {
+
+            JOptionPane.showMessageDialog(
+                    null,
+                    "Servicio Agua no disponible");
+
+        });
+
+        lightButton.addActionListener(e -> {
+
+            JOptionPane.showMessageDialog(
+                    null,
+                    "Servicio Luz no disponible");
+
+        });
+
+        wifiButton.addActionListener(e -> {
+
+            JOptionPane.showMessageDialog(
+                    null,
+                    "Servicio Internet no disponible");
+
+        });
+
+        exitButton.addActionListener(e -> {
+
+            System.exit(0);
+
+        });
+
+        setVisible(true);
 
     }
+
+    public static void main(String[] args) {
+
+        new Menu();
+
+    }
+
 }
