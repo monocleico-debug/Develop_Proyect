@@ -1,91 +1,54 @@
 import Control.GasController;
 
-import javax.swing.*;
-import java.awt.*;
-
-public class Menu extends JFrame {
-
-    public Menu() {
-
-        setTitle("Analisis de Servicios Publicos");
-
-        setSize(400, 350);
-
-        setDefaultCloseOperation(
-                JFrame.EXIT_ON_CLOSE);
-
-        setLocationRelativeTo(null);
-
-        setLayout(new GridLayout(5,1,10,10));
-
-        JButton gasButton =
-                new JButton("Gas");
-
-        JButton waterButton =
-                new JButton("Agua");
-
-        JButton lightButton =
-                new JButton("Luz");
-
-        JButton wifiButton =
-                new JButton("Internet");
-
-        JButton exitButton =
-                new JButton("Salir");
-
-        add(gasButton);
-        add(waterButton);
-        add(lightButton);
-        add(wifiButton);
-        add(exitButton);
-
-        gasButton.addActionListener(e -> {
-
-            GasController g =
-                    new GasController();
-
-            g.iniciar();
-
-        });
-
-        waterButton.addActionListener(e -> {
-
-            JOptionPane.showMessageDialog(
-                    null,
-                    "Servicio Agua no disponible");
-
-        });
-
-        lightButton.addActionListener(e -> {
-
-            JOptionPane.showMessageDialog(
-                    null,
-                    "Servicio Luz no disponible");
-
-        });
-
-        wifiButton.addActionListener(e -> {
-
-            JOptionPane.showMessageDialog(
-                    null,
-                    "Servicio Internet no disponible");
-
-        });
-
-        exitButton.addActionListener(e -> {
-
-            System.exit(0);
-
-        });
-
-        setVisible(true);
-
-    }
-
+import java.util.Scanner;
+public class Menu {
     public static void main(String[] args) {
 
-        new Menu();
+        Scanner sc = new Scanner(System.in);
+        int option;
+
+        do{
+
+            System.out.println("\n==============================");
+            System.out.println("Analisis de Servicios Publicos");
+            System.out.println("==============================");
+            System.out.println("1. Model.Gas");
+            System.out.println("2. Agua");
+            System.out.println("3. Luz");
+            System.out.println("4. Internet");
+            System.out.println("5. Salir");System.out.println("Elige una opcion: ");
+
+            option = sc.nextInt();
+
+            switch(option){
+
+                case 1:
+                    GasController g = new GasController();
+                    g.iniciar();
+                    break;
+
+                case 2:
+                    //Agua
+                    break;
+
+                case 3:
+                    //Luz
+                    break;
+
+                case 4:
+                    //Internet
+                    break;
+
+                case 5:
+                    System.out.println("Saliendo...");
+                    break;
+
+                default:
+                    System.out.println("Opción inválida");
+            }
+
+        } while (option != 5);
+        sc.close();
 
     }
-
 }

@@ -6,7 +6,9 @@ public class Gas extends Service {
     private int kitchenType;
     private int usageTime;
 
-    public Gas(double realGas, int cookingFrequency, int kitchenType,
+    public Gas(double realGas,
+               int cookingFrequency,
+               int kitchenType,
                int usageTime) {
 
         setRealConsumption(realGas);
