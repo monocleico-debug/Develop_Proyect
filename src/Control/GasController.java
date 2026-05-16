@@ -20,7 +20,7 @@ public class GasController {
 
         User user = new User(estrato, personas);
 
-        System.out.print("Ingrese consumo real de gas (m3): ");
+        System.out.print("Ingresar consumo real de gas (m3): ");
         double realGas = sc.nextDouble();
 
         System.out.println("\nFrecuencia de cocina:");

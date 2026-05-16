@@ -88,7 +88,7 @@ public class Calculations {
                     "Excelente consumo de gas.";
 
             alert =
-                    "No se detectan problemas.";
+                    "No se han detectado problemas.";
 
         }
 

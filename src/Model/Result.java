@@ -36,7 +36,7 @@ public class Result {
         System.out.println(
                 "Nivel de eficiencia: " + efficiencyLevel);
         System.out.println(
-                "Recomendación: " + recommendation);
+                "Recomendaciones: " + recommendation);
         System.out.println(
                 "Alerta: " + alert);
     }
