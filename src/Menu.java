@@ -43,7 +43,7 @@ public class Menu {
                     break;
 
                 default:
-                    System.out.println("Opción inválida");
+                    System.out.println("Opción incorrecta");
             }
 
         } while (option != 5);
