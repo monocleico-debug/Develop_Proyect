@@ -1,53 +1,61 @@
 package Control;
 
+import CalculationsService.WaterCalculations;
+import Model.Result;
+import Model.User;
 import Model.Water;
-import java.util.Scanner;
 
 public class WaterController {
 
-    Scanner sc = new Scanner(System.in);
+    public Result analyze(
+            int stratum,
+            int persons,
+            double realWater,
+            int washingFrequency,
+            int washingMachine,
+            int showerTime,
+            int additionalWater) {
 
-    public void startWaterService() {
+        User user =
+                new User(
+                        stratum,
+                        persons);
 
-        System.out.println("===== SERVICIO AGUA =====");
+        Water water =
+                new Water(
+                        realWater,
+                        washingFrequency,
+                        washingMachine,
+                        showerTime,
+                        additionalWater);
 
-        System.out.print("Consumo de agua (m3): ");
-        double realWater = sc.nextDouble();
+        WaterCalculations calc =
+                new WaterCalculations();
 
-        System.out.println("\nFrecuencia de lavado:");
-        System.out.println("1. Bajo");
-        System.out.println("2. Medio");
-        System.out.println("3. Alto");
-        int washingFrequency = sc.nextInt();
+        calc.calculateBaseConsumption(
+                user.getNumperson());
 
-        System.out.println("\nUso de lavadora:");
-        System.out.println("1. Poco");
-        System.out.println("2. Normal");
-        System.out.println("3. Mucho");
-        int washingMachine = sc.nextInt();
+        calc.calculateStratumAdjustment(
+                user.getStratum());
 
-        System.out.println("\nDuración de la ducha:");
-        System.out.println("1. Corto");
-        System.out.println("2. Medio");
-        System.out.println("3. Largo");
-        int showerTime = sc.nextInt();
+        calc.calculateScore(
+                water.getPoints());
 
-        System.out.println("\nUso adicional de agua:");
-        System.out.println("1. Ninguno");
-        System.out.println("2. Jardín o patio");
-        System.out.println("3. Piscina o carro");
-        int additionalWater = sc.nextInt();
+        calc.calculateExpectedConsumption();
 
-        Water water = new Water(
-                realWater,
-                washingFrequency,
-                washingMachine,
-                showerTime,
-                additionalWater
+        calc.calculatePercentage(
+                water.getRealConsumption());
+
+        calc.classifyConsumption();
+
+        return new Result(
+                calc.getBaseConsumption(),
+                calc.getExpectedConsumption(),
+                calc.getPercentage(),
+                calc.getClassification(),
+                calc.getEfficiencyLevel(),
+                calc.getRecommendation(),
+                calc.getAlert()
         );
-
-        System.out.println("\nPuntaje total: " + water.getPoints());
-
-        System.out.println("Listo, servicio de agua registrado 👍");
     }
 }

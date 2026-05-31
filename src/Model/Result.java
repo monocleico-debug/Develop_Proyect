@@ -10,8 +10,14 @@ public class Result {
     private String recommendation;
     private String alert;
 
-    public Result(double baseConsumption, double expectedConsumption, double percentage,
-                  String classification, String efficiencyLevel, String recommendation, String alert) {
+    public Result(
+            double baseConsumption,
+            double expectedConsumption,
+            double percentage,
+            String classification,
+            String efficiencyLevel,
+            String recommendation,
+            String alert) {
 
         this.baseConsumption = baseConsumption;
         this.expectedConsumption = expectedConsumption;
@@ -23,22 +29,32 @@ public class Result {
 
     }
 
-    public void showResults() {
+    public double getBaseConsumption() {
+        return baseConsumption;
+    }
 
-        System.out.println(
-                "Consumo base: " + baseConsumption);
-        System.out.println(
-                "Consumo esperado: " + expectedConsumption);
-        System.out.println(
-                "Porcentaje: " + percentage + "%");
-        System.out.println(
-                "Clasificación: " + classification);
-        System.out.println(
-                "Nivel de eficiencia: " + efficiencyLevel);
-        System.out.println(
-                "Recomendaciones: " + recommendation);
-        System.out.println(
-                "Alerta: " + alert);
+    public double getExpectedConsumption() {
+        return expectedConsumption;
+    }
+
+    public double getPercentage() {
+        return percentage;
+    }
+
+    public String getClassification() {
+        return classification;
+    }
+
+    public String getEfficiencyLevel() {
+        return efficiencyLevel;
+    }
+
+    public String getRecommendation() {
+        return recommendation;
+    }
+
+    public String getAlert() {
+        return alert;
     }
 
 }
