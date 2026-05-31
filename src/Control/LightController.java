@@ -1,36 +1,36 @@
 package Control;
 
-import CalculationsService.WifiCalculations;
+import CalculationsService.LightCalculations;
+import Model.Light;
 import Model.Result;
 import Model.User;
-import Model.Wifi;
 
-public class WifiController {
+public class LightController {
 
     public Result analyze(
             int stratum,
             int persons,
-            double realWifi,
-            int connectedDevices,
-            int streamingUse,
-            int gamingUse,
-            int connectionHours) {
+            double realLight,
+            int appliances,
+            int airConditioner,
+            int nightConsumption,
+            int electronicsUsage) {
 
         User user =
                 new User(
                         stratum,
                         persons);
 
-        Wifi wifi =
-                new Wifi(
-                        realWifi,
-                        connectedDevices,
-                        streamingUse,
-                        gamingUse,
-                        connectionHours);
+        Light light =
+                new Light(
+                        realLight,
+                        appliances,
+                        airConditioner,
+                        nightConsumption,
+                        electronicsUsage);
 
-        WifiCalculations calc =
-                new WifiCalculations();
+        LightCalculations calc =
+                new LightCalculations();
 
         calc.calculateBaseConsumption(
                 user.getNumperson());
@@ -39,12 +39,12 @@ public class WifiController {
                 user.getStratum());
 
         calc.calculateScore(
-                wifi.getPoints());
+                light.getPoints());
 
         calc.calculateExpectedConsumption();
 
         calc.calculatePercentage(
-                wifi.getRealConsumption());
+                light.getRealConsumption());
 
         calc.classifyConsumption();
 
