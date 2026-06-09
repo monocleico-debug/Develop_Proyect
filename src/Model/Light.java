@@ -11,7 +11,7 @@ public class Light extends Service {
                  int appliancesQuantity,
                  int airConditionUse,
                  int nightConsumption,
-                 int electronicUsTime) {
+                 int electronicUseTime) {
 
         setRealConsumption(realLight);
 

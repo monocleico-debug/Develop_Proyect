@@ -11,10 +11,10 @@ public class LightController {
             int stratum,
             int persons,
             double realLight,
-            int appliances,
+            int appliancesQuantity,
             int airConditioner,
             int nightConsumption,
-            int electronicsUsage) {
+            int electronicsUseTime) {
 
         User user =
                 new User(
@@ -24,10 +24,10 @@ public class LightController {
         Light light =
                 new Light(
                         realLight,
-                        appliances,
+                        appliancesQuantity,
                         airConditioner,
                         nightConsumption,
-                        electronicsUsage);
+                        electronicsUseTime);
 
         LightCalculations calc =
                 new LightCalculations();
