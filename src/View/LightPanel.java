@@ -137,29 +137,29 @@ public class LightPanel extends JFrame {
                 180,
                 30);
 
-        JLabel lblAppliances =
+        JLabel lblAppliancesQuantity =
                 new JLabel(
                         "Electrodomesticos:");
 
-        lblAppliances.setBounds(
+        lblAppliancesQuantity.setBounds(
                 20,
                 230,
                 180,
                 25);
 
-        JComboBox<String> cmbAppliances =
+        JComboBox<String> cmbAppliancesQuantity =
                 new JComboBox<>();
 
-        cmbAppliances.addItem(
+        cmbAppliancesQuantity.addItem(
                 "Pocos");
 
-        cmbAppliances.addItem(
+        cmbAppliancesQuantity.addItem(
                 "Moderados");
 
-        cmbAppliances.addItem(
+        cmbAppliancesQuantity.addItem(
                 "Muchos");
 
-        cmbAppliances.setBounds(
+        cmbAppliancesQuantity.setBounds(
                 220,
                 230,
                 180,
@@ -221,29 +221,29 @@ public class LightPanel extends JFrame {
                 180,
                 30);
 
-        JLabel lblElectronicsUsage =
+        JLabel lblElectronicsUseTime =
                 new JLabel(
                         "Uso de electronicos:");
 
-        lblElectronicsUsage.setBounds(
+        lblElectronicsUseTime.setBounds(
                 20,
                 380,
                 180,
                 25);
 
-        JComboBox<String> cmbElectronicsUsage =
+        JComboBox<String> cmbElectronicsUseTime =
                 new JComboBox<>();
 
-        cmbElectronicsUsage.addItem(
+        cmbElectronicsUseTime.addItem(
                 "< 4 Horas");
 
-        cmbElectronicsUsage.addItem(
+        cmbElectronicsUseTime.addItem(
                 "4 - 8 Horas");
 
-        cmbElectronicsUsage.addItem(
+        cmbElectronicsUseTime.addItem(
                 "> 8 Horas");
 
-        cmbElectronicsUsage.setBounds(
+        cmbElectronicsUseTime.setBounds(
                 220,
                 380,
                 180,
@@ -311,8 +311,8 @@ public class LightPanel extends JFrame {
                         Double.parseDouble(
                                 txtRealLight.getText());
 
-                int appliances =
-                        cmbAppliances
+                int appliancesQuantity =
+                        cmbAppliancesQuantity
                                 .getSelectedIndex() + 1;
 
                 int airConditioner =
@@ -323,8 +323,8 @@ public class LightPanel extends JFrame {
                         cmbNightConsumption
                                 .getSelectedIndex() + 1;
 
-                int electronicsUsage =
-                        cmbElectronicsUsage
+                int electronicsUseTime =
+                        cmbElectronicsUseTime
                                 .getSelectedIndex() + 1;
 
                 LightController controller =
@@ -335,10 +335,10 @@ public class LightPanel extends JFrame {
                                 stratum,
                                 numPerson,
                                 realLight,
-                                appliances,
+                                appliancesQuantity,
                                 airConditioner,
                                 nightConsumption,
-                                electronicsUsage
+                                electronicsUseTime
                         );
 
                 txtResult.setText(
@@ -392,8 +392,8 @@ public class LightPanel extends JFrame {
         add(lblRealLight);
         add(txtRealLight);
 
-        add(lblAppliances);
-        add(cmbAppliances);
+        add(lblAppliancesQuantity);
+        add(cmbAppliancesQuantity);
 
         add(lblAirConditioner);
         add(cmbAirConditioner);
@@ -401,8 +401,8 @@ public class LightPanel extends JFrame {
         add(lblNightConsumption);
         add(cmbNightConsumption);
 
-        add(lblElectronicsUsage);
-        add(cmbElectronicsUsage);
+        add(lblElectronicsUseTime);
+        add(cmbElectronicsUseTime);
 
         add(btnAnalyze);
 
