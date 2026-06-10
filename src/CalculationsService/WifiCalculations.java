@@ -47,7 +47,6 @@ public class WifiCalculations {
                 break;
 
             default:
-                System.out.println("Estrato invalido");
                 stratumAdjustment = 0;
 
         }

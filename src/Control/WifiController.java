@@ -9,7 +9,7 @@ public class WifiController {
 
     public Result analyze(
             int stratum,
-            int persons,
+            int numPerson,
             double realWifi,
             int connectedDevices,
             int streamingUse,
@@ -19,7 +19,7 @@ public class WifiController {
         User user =
                 new User(
                         stratum,
-                        persons);
+                        numPerson);
 
         Wifi wifi =
                 new Wifi(

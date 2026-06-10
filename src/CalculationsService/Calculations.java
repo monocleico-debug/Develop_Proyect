@@ -48,7 +48,6 @@ public class Calculations {
                 break;
 
             default:
-                System.out.println("Estrato invalido");
                 stratumAdjustment = 0;
 
         }

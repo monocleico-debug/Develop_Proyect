@@ -9,7 +9,7 @@ public class GasController {
 
     public Result analyze(
             int stratum,
-            int persons,
+            int numPerson,
             double realGas,
             int cookingFrequency,
             int kitchenType,
@@ -18,7 +18,7 @@ public class GasController {
         User user =
                 new User(
                         stratum,
-                        persons);
+                        numPerson);
 
         Gas gas =
                 new Gas(

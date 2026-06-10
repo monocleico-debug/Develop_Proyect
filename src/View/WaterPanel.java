@@ -303,13 +303,25 @@ public class WaterPanel extends JFrame {
                         Integer.parseInt(
                                 txtStratum.getText());
 
+                if (stratum < 1 || stratum > 6) {
+                    throw new Exception();
+                }
+
                 int numPerson =
                         Integer.parseInt(
                                 txtNumPerson.getText());
 
+                if (numPerson <= 0) {
+                    throw new Exception();
+                }
+
                 double realWater =
                         Double.parseDouble(
                                 txtRealWater.getText());
+
+                if (realWater <= 0) {
+                    throw new Exception();
+                }
 
                 int washingFrequency =
                         cmbWashingFrequency

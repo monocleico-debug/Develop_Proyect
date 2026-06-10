@@ -1,11 +1,11 @@
 package Model;
 public class User {
     private int stratum;
-    private int numperson;
+    private int numPerson;
 
-    public User(int stratum, int numperson) {
+    public User(int stratum, int numPerson) {
         this.stratum = stratum;
-        this.numperson = numperson;
+        this.numPerson = numPerson;
     }
 
     public int getStratum() {
@@ -21,12 +21,12 @@ public class User {
     }
 
     public int getNumperson() {
-        return numperson;
+        return numPerson;
     }
 
-    public void setNumperson(int numperson) {
-        if (numperson > 0) {
-            this.numperson = numperson;
+    public void setNumperson(int numPerson) {
+        if (numPerson > 0) {
+            this.numPerson = numPerson;
         } else {
             System.out.println("Número inválido");
         }

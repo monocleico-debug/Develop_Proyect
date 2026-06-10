@@ -9,7 +9,7 @@ public class WaterController {
 
     public Result analyze(
             int stratum,
-            int persons,
+            int numPerson,
             double realWater,
             int washingFrequency,
             int washingMachine,
@@ -19,7 +19,7 @@ public class WaterController {
         User user =
                 new User(
                         stratum,
-                        persons);
+                        numPerson);
 
         Water water =
                 new Water(

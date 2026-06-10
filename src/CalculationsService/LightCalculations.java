@@ -47,7 +47,6 @@ public class LightCalculations {
                 break;
 
             default:
-                System.out.println("Estrato invalido");
                 stratumAdjustment = 0;
 
         }

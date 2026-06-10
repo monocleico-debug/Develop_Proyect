@@ -47,7 +47,6 @@ public class WaterCalculations {
                 break;
 
             default:
-                System.out.println("Estrato invalido");
                 stratumAdjustment = 0;
 
         }

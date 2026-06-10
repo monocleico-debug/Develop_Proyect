@@ -266,13 +266,25 @@ public class GasPanel extends JFrame {
                         Integer.parseInt(
                                 txtStratum.getText());
 
-                int numperson =
+                if (stratum < 1 || stratum > 6) {
+                    throw new Exception();
+                }
+
+                int numPerson =
                         Integer.parseInt(
                                 txtNumPerson.getText());
+
+                if (numPerson <= 0) {
+                    throw new Exception();
+                }
 
                 double realGas =
                         Double.parseDouble(
                                 txtRealGas.getText());
+
+                if (realGas <= 0) {
+                    throw new Exception();
+                }
 
                 int cookingFrequency =
                         cmbCookingFrequency
@@ -292,7 +304,7 @@ public class GasPanel extends JFrame {
                 Result result =
                         controller.analyze(
                                 stratum,
-                                numperson,
+                                numPerson,
                                 realGas,
                                 cookingFrequency,
                                 kitchenType,

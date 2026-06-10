@@ -272,13 +272,25 @@ public class WifiPanel extends JFrame {
                         Integer.parseInt(
                                 txtStratum.getText());
 
+                if (stratum < 1 || stratum > 6) {
+                    throw new Exception();
+                }
+
                 int numPerson =
                         Integer.parseInt(
                                 txtNumPerson.getText());
 
+                if (numPerson <= 0) {
+                    throw new Exception();
+                }
+
                 double realWifi =
                         Double.parseDouble(
                                 txtRealWifi.getText());
+
+                if (realWifi <= 0) {
+                    throw new Exception();
+                }
 
                 int connectedDevices =
                         cmbConnectedDevices.getSelectedIndex() + 1;

@@ -9,7 +9,7 @@ public class LightController {
 
     public Result analyze(
             int stratum,
-            int persons,
+            int numPerson,
             double realLight,
             int appliancesQuantity,
             int airConditioner,
@@ -19,7 +19,7 @@ public class LightController {
         User user =
                 new User(
                         stratum,
-                        persons);
+                        numPerson);
 
         Light light =
                 new Light(
