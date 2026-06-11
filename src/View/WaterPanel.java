@@ -10,13 +10,6 @@ public class WaterPanel extends JFrame {
 
     public WaterPanel() {
 
-        ImageIcon icon =
-                new ImageIcon(
-                        "resources/app_icon.png");
-
-        setIconImage(
-                icon.getImage());
-
         setTitle(
                 "Analisis de Agua");
 
@@ -55,30 +48,6 @@ public class WaterPanel extends JFrame {
                         24));
 
         add(title);
-
-        ImageIcon waterIcon =
-                new ImageIcon(
-                        "resources/water.png");
-
-        Image waterImage =
-                waterIcon.getImage()
-                        .getScaledInstance(
-                                100,
-                                100,
-                                Image.SCALE_SMOOTH);
-
-        JLabel lblWaterIcon =
-                new JLabel(
-                        new ImageIcon(
-                                waterImage));
-
-        lblWaterIcon.setBounds(
-                500,
-                5,
-                100,
-                100);
-
-        add(lblWaterIcon);
 
         JLabel lblStratum =
                 new JLabel(

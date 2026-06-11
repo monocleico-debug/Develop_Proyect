@@ -10,13 +10,6 @@ public class LightPanel extends JFrame {
 
     public LightPanel() {
 
-        ImageIcon icon =
-                new ImageIcon(
-                        "resources/app_icon.png");
-
-        setIconImage(
-                icon.getImage());
-
         setTitle(
                 "Analisis de Luz");
 
@@ -55,30 +48,6 @@ public class LightPanel extends JFrame {
                         24));
 
         add(title);
-
-        ImageIcon lightIcon =
-                new ImageIcon(
-                        "resources/light.png");
-
-        Image lightImage =
-                lightIcon.getImage()
-                        .getScaledInstance(
-                                100,
-                                100,
-                                Image.SCALE_SMOOTH);
-
-        JLabel lblLightIcon =
-                new JLabel(
-                        new ImageIcon(
-                                lightImage));
-
-        lblLightIcon.setBounds(
-                500,
-                5,
-                100,
-                100);
-
-        add(lblLightIcon);
 
         JLabel lblStratum =
                 new JLabel(

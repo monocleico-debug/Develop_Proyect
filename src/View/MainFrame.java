@@ -9,13 +9,6 @@ public class MainFrame extends JFrame {
 
         setTitle("Analizador de Servicios Públicos");
 
-        ImageIcon appIcon =
-                new ImageIcon(
-                        "resources/app_icon.png");
-
-        setIconImage(
-                appIcon.getImage());
-
         setSize(700, 500);
 
         setDefaultCloseOperation(
@@ -27,46 +20,6 @@ public class MainFrame extends JFrame {
 
         getContentPane().setBackground(
                 new Color(205, 224, 237));
-
-        ImageIcon gasIcon =
-                new ImageIcon(
-                        new ImageIcon(
-                                "resources/gas.png")
-                                .getImage()
-                                .getScaledInstance(
-                                        32,
-                                        32,
-                                        Image.SCALE_SMOOTH));
-
-        ImageIcon waterIcon =
-                new ImageIcon(
-                        new ImageIcon(
-                                "resources/water.png")
-                                .getImage()
-                                .getScaledInstance(
-                                        32,
-                                        32,
-                                        Image.SCALE_SMOOTH));
-
-        ImageIcon lightIcon =
-                new ImageIcon(
-                        new ImageIcon(
-                                "resources/light.png")
-                                .getImage()
-                                .getScaledInstance(
-                                        32,
-                                        32,
-                                        Image.SCALE_SMOOTH));
-
-        ImageIcon wifiIcon =
-                new ImageIcon(
-                        new ImageIcon(
-                                "resources/wifi.png")
-                                .getImage()
-                                .getScaledInstance(
-                                        32,
-                                        32,
-                                        Image.SCALE_SMOOTH));
 
         JLabel title =
                 new JLabel(
@@ -105,7 +58,7 @@ public class MainFrame extends JFrame {
         add(subtitle);
 
         JButton gasButton =
-                new JButton("Gas", gasIcon);
+                new JButton("Gas");
 
         gasButton.setBounds(
                 120,
@@ -117,7 +70,7 @@ public class MainFrame extends JFrame {
                 new Color(170, 225, 115));
 
         JButton waterButton =
-                new JButton("Agua", waterIcon);
+                new JButton("Agua");
 
         waterButton.setBounds(
                 380,
@@ -129,7 +82,7 @@ public class MainFrame extends JFrame {
                 new Color(112, 134, 234));
 
         JButton lightButton =
-                new JButton("Luz", lightIcon);
+                new JButton("Luz");
 
         lightButton.setBounds(
                 120,
@@ -141,7 +94,7 @@ public class MainFrame extends JFrame {
                 new Color(228, 212, 121));
 
         JButton wifiButton =
-                new JButton("Internet", wifiIcon);
+                new JButton("Internet");
 
         wifiButton.setBounds(
                 380,

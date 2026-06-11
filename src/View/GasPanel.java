@@ -21,12 +21,6 @@ public class GasPanel extends JFrame {
         setDefaultCloseOperation(
                 JFrame.DISPOSE_ON_CLOSE);
 
-        ImageIcon icon =
-                new ImageIcon(
-                        "resources/app_icon.png");
-
-        setIconImage(
-                icon.getImage());
 
         getContentPane().setBackground(
                 new Color(205, 224, 237));
@@ -48,29 +42,6 @@ public class GasPanel extends JFrame {
                         24));
 
         add(title);
-
-        ImageIcon gasIcon =
-                new ImageIcon("resources/gas.png");
-
-        Image gasImage =
-                gasIcon.getImage()
-                        .getScaledInstance(
-                                100,
-                                100,
-                                Image.SCALE_SMOOTH);
-
-        JLabel lblGasIcon =
-                new JLabel(
-                        new ImageIcon(
-                                gasImage));
-
-        lblGasIcon.setBounds(
-                500,
-                5,
-                100,
-                100);
-
-        add(lblGasIcon);
 
         JLabel lblStratum =
                 new JLabel("Estrato:");

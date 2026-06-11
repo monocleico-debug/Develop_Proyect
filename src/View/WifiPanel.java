@@ -10,13 +10,6 @@ public class WifiPanel extends JFrame {
 
     public WifiPanel() {
 
-        ImageIcon icon =
-                new ImageIcon(
-                        "resources/app_icon.png");
-
-        setIconImage(
-                icon.getImage());
-
         setTitle(
                 "Analisis de Internet");
 
@@ -55,30 +48,6 @@ public class WifiPanel extends JFrame {
                         24));
 
         add(title);
-
-        ImageIcon wifiIcon =
-                new ImageIcon(
-                        "resources/wifi.png");
-
-        Image wifiImage =
-                wifiIcon.getImage()
-                        .getScaledInstance(
-                                100,
-                                100,
-                                Image.SCALE_SMOOTH);
-
-        JLabel lblWifiIcon =
-                new JLabel(
-                        new ImageIcon(
-                                wifiImage));
-
-        lblWifiIcon.setBounds(
-                500,
-                5,
-                100,
-                100);
-
-        add(lblWifiIcon);
 
         JLabel lblStratum =
                 new JLabel("Estrato:");
