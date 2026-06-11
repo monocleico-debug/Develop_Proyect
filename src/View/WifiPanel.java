@@ -19,8 +19,7 @@ public class WifiPanel extends JFrame {
 
         setLayout(null);
 
-        setLocationRelativeTo(
-                null);
+        setLocationRelativeTo(null);
 
         setDefaultCloseOperation(
                 JFrame.DISPOSE_ON_CLOSE);

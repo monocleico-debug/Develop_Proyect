@@ -19,8 +19,7 @@ public class WaterPanel extends JFrame {
 
         setLayout(null);
 
-        setLocationRelativeTo(
-                null);
+        setLocationRelativeTo(null);
 
         setDefaultCloseOperation(
                 JFrame.DISPOSE_ON_CLOSE);

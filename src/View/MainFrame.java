@@ -22,8 +22,7 @@ public class MainFrame extends JFrame {
                 new Color(205, 224, 237));
 
         JLabel title =
-                new JLabel(
-                        "ANALIZADOR DE SERVICIOS PUBLICOS");
+                new JLabel("ANALIZADOR DE SERVICIOS PUBLICOS");
 
         title.setBounds(
                 100,

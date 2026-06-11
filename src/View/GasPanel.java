@@ -62,8 +62,7 @@ public class GasPanel extends JFrame {
                 30);
 
         JLabel lblNumPerson =
-                new JLabel(
-                        "Numero de personas:");
+                new JLabel("Numero de personas:");
 
         lblNumPerson.setBounds(
                 20,
